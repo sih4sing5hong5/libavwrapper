@@ -21,7 +21,7 @@ resulting command.
 from setuptools import setup
 
 setup(
-    name="libavwrapper",
+    name="pypi-libavwrapper",
     version="0.1-dev",
     packages=['libavwrapper'],
     author="Conrado Buhrer",

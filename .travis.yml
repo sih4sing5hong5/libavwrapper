@@ -1,0 +1,25 @@
+sudo: false
+language: python
+python:
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+branches:
+  only:
+  - pypi
+install:
+- pip install python-coveralls
+script:
+- coverage run test.py
+after_success:
+- coverage report
+- coveralls
+deploy:
+  provider: pypi
+  user: sih4sing5hong5
+  password:
+    secure: Vp+0xqj4OFOTYSRKVeoE5/kcyNb4gGHH2/XiknaV0ilCA9CnpMO42DDZbOWsdLAXA9GTqNVIqgl4JiKlT68jXaWl4N7rBvQMjch/KFeM4bt3Es/fo9ZSmYyYASkTfM1w9FXdq4DwHEQbuYdtVf1oAu67GInfPl2yOVOafogmxjDuyTFOyrHoLskstVZJKuP8WB8UJedtBfF3pLivP7OcsdjVbWnElInQ+zKWS3ZzNKDbOfDH8JyqscCR3WZVuwSODzEalJprE112JyaDVp6mJNgGMkFvz+cjEePIllwkJ7xz+800dBpT/LTKJaIPpTXwBlhkHKxRtnNfABaLrqYTiDqwVsvLaNpWHxd7aD7/jMuiJQjgE9NGLqohqBZSzu7YQG0Mydk2SxPL3esGxhy0yhhWB11rYonF14ZlPf7vUQcqeA+afpBPQnISDqUg/tIo+SJOYkSIssUujS3GGTUe9LcJseFiocAyCrolkkVL/506CDKCUtJVlRlSR6u2Mwj6oxqg5sNKZr2sGzWfyNwLsOJwWnaU88n5WIAog5Cxd1H5m8rcSRnpq2Oj7XFoXDZbVi+xVxByk9yd1FfS2rXD2quAo43XNVkwB1mvyawitRPPOup18SAn/a+zgN9f7NSmKa2Kug/XS+z+26vhiV7tka9uDL/hit4G2M+3g1+6nn4=
+  on:
+    repo: sih4sing5hong5/libavwrapper
+    branch: pypi
