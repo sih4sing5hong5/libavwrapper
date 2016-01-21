@@ -22,7 +22,7 @@ from setuptools import setup
 
 setup(
     name="pypi-libavwrapper",
-    version="0.1-dev",
+    version="0.0.1",
     packages=['libavwrapper'],
     author="Conrado Buhrer",
     author_email="conrado@buhrer.net",
